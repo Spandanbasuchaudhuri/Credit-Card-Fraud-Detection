@@ -51,22 +51,22 @@ Additionally, model evaluation is conducted using industry-standard classificati
 
 ## Results and Analysis
 ### Classification Report
-![Classification Report](file-1Mn5zsAMvGKvyaAJRmkFKm)
+![Classification Report](images/Classification_Report.png)
 
 The classification report demonstrates that the model achieves near-perfect classification for non-fraudulent transactions (Class 0) with **100% precision and recall**. However, fraudulent transactions (Class 1) exhibit a lower recall of **79%**, suggesting that **21% of fraudulent transactions remain undetected**. The **ROC-AUC score of 0.95** indicates a strong discriminative ability of the model in distinguishing fraudulent from non-fraudulent transactions.
 
 ### Confusion Matrix
-![Confusion Matrix](file-Q6S5zAAaNPdECqKYaeZP8k)
+![Confusion Matrix](images/Confusion_Matrix.png)
 
 The confusion matrix reveals that out of **98 actual fraud cases**, **21 instances were misclassified as non-fraudulent**, resulting in a **false negative rate that may require further optimization**. Given that fraud detection prioritizes minimizing false negatives, refining the recall metric is imperative.
 
 ### Precision-Recall Curve
-![Precision-Recall Curve](file-Xe7Z6vxyFWFZa44akkr2PF)
+![Precision-Recall Curve](images/Precision_Recall_Curve.png)
 
 The precision-recall curve illustrates the trade-off between precision and recall. The steep decline in precision at high recall values suggests that increasing recall may lead to a significant drop in precision. Since fraud detection systems must **prioritize identifying fraudulent transactions with minimal false negatives**, further tuning of the model’s decision threshold may be beneficial.
 
 ### Feature Importance in Fraud Detection
-![Feature Importance](file-DaHdFuCRoVp93mvfC9wXAb)
+![Feature Importance](images/Feature_Importance_in_Fraud_Detection.png)
 
 The feature importance plot indicates that variables **V4, V10, V14, and V17** are highly influential in detecting fraudulent transactions, whereas the `Amount` feature appears to contribute minimally. This insight can guide **feature engineering efforts and the development of domain-specific fraud detection heuristics**.
 
